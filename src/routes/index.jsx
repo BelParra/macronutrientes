@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { Home } from '../pages/home';
+import { Home } from '../pages/Home';
 import { NutritionalCalculator } from '../pages/NutritionalCalculator';
 import { MacroCalculator } from '../pages/MacroCalculator';
 import { CaloriesCalculator } from '../pages/CaloriesCalculator';
