@@ -1,0 +1,433 @@
+.slidein {
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    .head {
+        font-family: var(--font-primary);
+        display: flex;
+        background-color: var(--color-primary);
+        height: 90px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+        h3 {
+            margin: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+}
+
+.cardInner {
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    transition: transform 2s;
+}
+
+.flipped .cardInner {
+    transform: rotateY(180deg);
+    transition: transform 2s;
+}
+
+.cardFront,
+.cardBack {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardFront,
+.formCalc {
+    flex-direction: column;
+}
+
+.formCalc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    .radios,
+    .checkbox,
+    .inputs,
+    .selects {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            margin: 0 15px 0 0;
+        }
+
+
+    }
+
+    .selects {
+        label {
+            margin: 0 15px 15px 15px;
+        }
+
+        select {
+            margin: 0 15px;
+        }
+    }
+
+    .frontButtons {
+        width: 100%;
+
+        button {
+            width: 100%;
+            height: 40px;
+            margin: 15px;
+            background-color: var(--color-primary);
+            font-weight: bolder;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+            font-size: 0.875rem;
+            color: white;
+
+        }
+    }
+}
+
+.frontButtons {
+    display: flex;
+    bottom: 4px;
+}
+
+.backButtons {
+    bottom: 30px;
+}
+
+.frontButtons,
+.backButtons {
+
+    button {
+        width: 100%;
+        height: 40px;
+        margin: 15px;
+        background-color: var(--color-primary);
+        font-weight: bolder;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+        font-size: 0.875rem;
+        color: white;
+
+        &:hover {
+            background-color: var(--color-secondary);
+        }
+    }
+
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+
+    .result {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        span {
+            margin: 15px;
+        }
+
+        .backButtons {
+            display: flex;
+            flex-direction: row;
+
+            button {
+                width: 100px;
+                height: 40px;
+                margin: 15px;
+                background-color: var(--color-primary);
+                font-weight: bolder;
+                box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+                font-size: 0.875rem;
+                color: white;
+
+                &:hover {
+                    background-color: var(--color-secondary);
+                }
+            }
+
+        }
+    }
+}
+
+@media (min-width:500px) {
+    .formCalc {
+        width: 500px;
+
+        .selects {
+            margin-bottom: 0;
+            margin: 15px 0;
+        }
+
+        .radios,
+        .checkbox,
+        .inputs {
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 0;
+
+
+            h3 {
+                margin: 15px 0 15px 15px;
+            }
+        }
+    }
+
+    .slidein {
+        animation: slide-in 0.5s forwards;
+    }
+
+    @keyframes slide-in {
+        0% {
+            transform: translateX(-100%);
+        }
+
+        100% {
+            transform: translateX(0)
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+
+        .head {
+            font-family: var(--font-primary);
+            display: flex;
+            background-color: var(--color-primary);
+            height: 90px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+
+            h3 {
+                margin: 5px;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .cardInner {
+        width: 100%;
+        height: 100vh;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        transition: transform 2s;
+    }
+
+    .flipped .cardInner {
+        transform: rotateY(180deg);
+        transition: transform 2s;
+    }
+
+    .cardFront,
+    .cardBack {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cardFront,
+    .formCalc {
+        flex-direction: column;
+    }
+
+    .formCalc {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        .radios,
+        .checkbox,
+        .inputs,
+        .selects {
+            width: 100%;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                margin: 0 15px 0 0;
+            }
+
+
+        }
+
+        .selects {
+            label {
+                margin: 0 15px 15px 15px;
+            }
+
+            select {
+                margin: 0 15px;
+            }
+        }
+
+        .frontButtons {
+            width: 100%;
+
+            button {
+                width: 100%;
+                height: 40px;
+                margin: 15px;
+                background-color: var(--color-primary);
+                font-weight: bolder;
+                box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+                font-size: 0.875rem;
+                color: white;
+
+            }
+        }
+    }
+
+    .frontButtons {
+        display: flex;
+        bottom: 4px;
+    }
+
+    .backButtons {
+        bottom: 30px;
+    }
+
+    .frontButtons,
+    .backButtons {
+
+        button {
+            width: 100%;
+            height: 40px;
+            margin: 15px;
+            background-color: var(--color-primary);
+            font-weight: bolder;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+            font-size: 0.875rem;
+            color: white;
+
+            &:hover {
+                background-color: var(--color-secondary);
+            }
+        }
+
+    }
+
+    .cardBack {
+        transform: rotateY(180deg);
+
+        .result {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            span {
+                margin: 15px;
+            }
+
+            .backButtons {
+                display: flex;
+                flex-direction: row;
+
+                button {
+                    width: 100px;
+                    height: 40px;
+                    margin: 15px;
+                    background-color: var(--color-primary);
+                    font-weight: bolder;
+                    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+                    font-size: 0.875rem;
+                    color: white;
+
+                    &:hover {
+                        background-color: var(--color-secondary);
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media (min-width:500px) {
+        .formCalc {
+            width: 500px;
+
+            .selects {
+                margin-bottom: 0;
+                margin: 15px 0;
+            }
+
+            .radios,
+            .checkbox,
+            .inputs {
+                justify-content: space-between;
+                flex-direction: row;
+                margin-bottom: 0;
+
+
+                h3 {
+                    margin: 15px 0 15px 15px;
+                }
+            }
+        }
+
+        .cardBack {
+            .result {
+                width: 500px;
+
+                span {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

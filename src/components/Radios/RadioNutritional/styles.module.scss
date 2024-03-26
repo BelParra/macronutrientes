@@ -1,0 +1,37 @@
+.radioNutritional input[type='radio'] {
+    display: none;
+}
+
+.radioNutritional {
+    font-size: 0.9375rem;
+    width: 112px;
+
+    label {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+
+
+        img {
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+    }
+}
+
+.radioNutritional input[type='radio']:checked+label {
+    font-weight: 700;
+}
+
+.radioNutritional .red {
+    color: red;
+}
+
+.radioNutritional .blue {
+    color: blue;
+}
