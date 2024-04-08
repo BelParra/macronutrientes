@@ -11,8 +11,9 @@
 }
 
 .cardInner {
+    display: flex;
     width: 100%;
-    height: 75vh;
+    height: 90vh;
     transform-style: preserve-3d;
     transition: transform 0.5s;
     transition: transform 2s;
@@ -26,63 +27,33 @@
 .cardFront,
 .cardBack {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     position: absolute;
     backface-visibility: hidden;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
 
-    form {
+}
+
+.cardFront {
+    .macros {
         display: flex;
         flex-direction: column;
         align-items: center;
 
-        .chartJS {
-            position: relative;
-        }
-
         p {
+            color: var(--color-secondary);
             margin-bottom: 10px;
-            box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.664);
         }
 
-        .recomended {
-            font-size: small;
-        }
     }
-}
 
-.backButtons,
-.frontButtons {
     button {
-        position: absolute;
-        top: 126px;
-        left: 102px;
-        background-color: rgba(255, 255, 255, 0);
-        color: rgba(255, 255, 255, 0);
-        border-radius: 100%;
-        width: 98px;
-        height: 98px;
-    }
-}
-
-.cardBack {
-    transform: rotateY(180deg);
-}
-
-.formMacro {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.bothSidesButtons {
-    button {
-        width: 100px;
-        height: 40px;
-        margin: 15px;
+        width: 50%;
+        height: 30px;
         background-color: var(--color-primary);
         font-weight: bolder;
         box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
@@ -91,6 +62,96 @@
 
         &:hover {
             background-color: var(--color-secondary);
+        }
+    }
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            margin: 15px 15px 0 15px;
+            font-size: 1em;
+        }
+    }
+
+    .formMacros {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .buttonContainer {
+
+            justify-content: center;
+            margin: 15px;
+            align-items: center;
+
+            button {
+                height: 50px;
+                width: 100%;
+                background-color: var(--color-primary);
+                box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                transform: translateY(-3px);
+                color: var(--color-secondary);
+            }
+
+            button:active {
+                transform: translateY(1px);
+            }
+        }
+    }
+}
+
+.bothSidesButtons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+    a {
+        margin: 15px;
+        width: 100%;
+
+        button {
+            min-width: 120px;
+            width: 100%;
+            height: 40px;
+            background-color: var(--color-primary);
+            font-weight: bolder;
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.089);
+            font-size: 0.875rem;
+            color: white;
+
+            &:hover {
+                background-color: var(--color-secondary);
+            }
+        }
+
+    }
+}
+
+@media (min-width:500px) {
+    .card {
+        width: 100%;
+
+        .cardInner,
+        .info,
+        .macros,
+        .bothSidesButtons {
+            width: 500px;
+        }
+
+        .cardBack {
+            justify-content: center;
         }
     }
 }
