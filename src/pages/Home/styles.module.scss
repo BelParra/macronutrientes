@@ -24,7 +24,7 @@
         box-shadow: 0px 10px 2.5vh rgba(0, 0, 0, 0.1);
 
         h3 {
-            font-size: 3.23vh;
+            font-size: 2.90vh;
             font-weight: bold;
         }
     }
@@ -37,14 +37,14 @@
 
         p {
             margin: 2.5vh 2.5vh 0 2.5vh;
-            font-size: 2.67vh;
+            font-size: 2.5vh;
         }
     }
 
     .macros {
         flex-direction: column;
         align-items: center;
-        height: 40.5vh;
+        height: 40vh;
 
         .buttonContainer {
 
@@ -52,12 +52,14 @@
             align-items: center;
 
             button {
-                margin: 2.74vh;
+                border-radius: 2vh;
+                margin: 2.5vh;
                 height: 8vh;
                 width: 100%;
                 background-color: var(--color-primary);
                 box-shadow: 0px 10px 2.5vh rgba(0, 0, 0, 0.1);
                 transition: all 0.3s ease;
+                font-size: 2vh;
             }
 
             button:hover {
@@ -74,7 +76,7 @@
     .buttonHome {
         flex-direction: column;
         align-items: center;
-        height: 25.5vh;
+        height: 26vh;
         justify-content: space-evenly;
 
         p {
