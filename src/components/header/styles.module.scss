@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 13.5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.137);
+    margin-bottom: 0.8vh;
+
+    img {
+        height: 60px;
+        position: absolute;
+        left: 0;
+    }
+
+    h1 {
+        position: absolute;
+
+    }
+}

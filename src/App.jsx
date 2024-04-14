@@ -1,9 +1,10 @@
-import MyRoutes from './routes/index.jsx';
+import Routes from "./routes";
 
 function App() {
+
   return (
     <>
-        <MyRoutes />
+      <Routes />
     </>
   );
 }

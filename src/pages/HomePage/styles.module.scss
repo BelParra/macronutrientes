@@ -1,0 +1,102 @@
+main {
+    display: flex;
+    flex-direction: column;
+    height: 86.5vh;
+    align-items: center;
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 21vh;
+        width: 100%;
+
+        h2 {
+            margin-bottom: 10px;
+            width: 90%;
+        }
+    }
+
+    .macros {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40.5vh;
+
+        .buttonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 13.5vh;
+            width: 90%;
+
+            p {
+                margin: 10px;
+            }
+
+            button {
+                width: 100%;
+                background-color: var(--color-primary);
+                box-shadow: 9px 10px 15px 2px rgba(0, 0, 0, 0.158);
+                transition: all 0.3s ease;
+                margin: 0;
+                font-weight: 600;
+                color: var(--blue-0);
+                height: 50px;
+
+
+            }
+
+            button:hover {
+                transform: translateY(-3px);
+                color: var(--color-secondary);
+            }
+
+            button:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+
+    .buttonHome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 25vh;
+        justify-content: space-evenly;
+
+        a,
+        span {
+            width: 90%;
+        }
+
+        button {
+            background-color: var(--color-primary);
+            font-weight: bolder;
+            color: white;
+            width: 100%;
+            height: 3.125rem;
+
+        }
+
+        button:hover {
+            background-color: var(--color-secondary);
+        }
+    }
+}
+
+
+@media (min-width:500px) {
+    main {
+        width: 100%;
+
+        .info,
+        .macros,
+        .buttonHome {
+            width: 500px;
+        }
+    }
+}

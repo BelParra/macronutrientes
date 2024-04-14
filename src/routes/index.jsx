@@ -1,9 +1,9 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { Home } from '../pages/Home';
-import { NutritionalCalculator } from '../pages/NutritionalCalculator';
-import { MacroCalculator } from '../pages/MacroCalculator';
-import { CaloriesCalculator } from '../pages/CaloriesCalculator';
+import { HomePage } from '../pages/HomePage';
+import { InfoPage } from '../pages/InfoPage';
+import { CaloriesPage } from '../pages/CaloriesPage';
+import { MacroPage } from '../pages/MacroPage';
 
 
 export default () => {
@@ -11,10 +11,10 @@ export default () => {
     return (
         <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
-                <Route path='/' element={<Home />} />
-                <Route path='/calculadora' element={<NutritionalCalculator />} />
-                <Route path='/macros' element={<MacroCalculator />} />
-                <Route path='/alimentacao' element={<CaloriesCalculator />} />
+                <Route path='/' element={<HomePage />} />
+                <Route path='/calculadora' element={<InfoPage />} />
+                <Route path='/macros' element={<CaloriesPage />} />
+                <Route path='/alimentacao' element={<MacroPage />} />
             </Routes>
         </AnimatePresence>
     );

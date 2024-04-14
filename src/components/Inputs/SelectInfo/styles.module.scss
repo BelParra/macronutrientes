@@ -1,0 +1,23 @@
+.selectInfo {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    width: 100%;
+align-items: center;
+    select {
+        height: 40px;
+        font-family: var(--font-primary);
+        font-size: 0.9375rem;
+        font-weight: 600;
+        padding: 2px;
+        border-radius: 7px;
+        background-color: white;
+        color: var(--color-secondary);
+
+    }
+
+    label {
+        margin-bottom: 10px;
+        font-size: 1.0625rem;
+    }
+}
