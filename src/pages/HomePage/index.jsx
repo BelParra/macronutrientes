@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Header from '../../components/header';
 
-export const HomePage = () => {
+const HomePage = () => {
     const [selectedMacro, setSelectedMacro] = useState('');
 
     const macros = {
@@ -41,7 +41,7 @@ export const HomePage = () => {
                 </section>
                 <section className={styles.buttonHome}>
                     <span>Agora que sabe para que serve cada um, vamos <strong>calcular suas metas diárias?</strong></span>
-                    <Link to='/calculadora'>
+                    <Link to='/info'>
                         <button>Vamos lá!</button>
                     </Link>
                 </section>
@@ -49,3 +49,5 @@ export const HomePage = () => {
         </>
     );
 };
+
+export default HomePage;

@@ -1,18 +1,14 @@
-import { Route, Routes, useLocation } from 'react-router-dom';
-import { HomePage } from '../pages/HomePage';
-import { InfoPage } from '../pages/InfoPage';
-import { CaloriesPage } from '../pages/CaloriesPage';
-import { MacroPage } from '../pages/MacroPage';
-
+import { Route, Routes } from "react-router-dom";
+import { HomePage, InfoPage, CaloriesPage, MacroPage } from "../pages";
 
 export default () => {
-    const location = useLocation();
+
     return (
-        <Routes location={location} key={location.pathname}>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/calculadora' element={<InfoPage />} />
-            <Route path='/macros' element={<CaloriesPage />} />
-            <Route path='/alimentacao' element={<MacroPage />} />
+        <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/info" element={<InfoPage />}></Route>
+            <Route path="/calories" element={<CaloriesPage />}></Route>
+            <Route path="/macronutrients" element={<MacroPage />}></Route>
         </Routes>
     );
 };

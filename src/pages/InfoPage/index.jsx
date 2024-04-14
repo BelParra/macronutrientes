@@ -11,7 +11,7 @@ import '../../styles/index.scss';
 import SwitchNutricional from '../../components/Inputs/SwitchInfo/index.jsx';
 import Header from '../../components/header/index.jsx';
 
-export const InfoPage = () => {
+const InfoPage = () => {
     const [age, setAge] = useState('');
     const [sex, setSex] = useState(null);
     const [weight, setWeight] = useState('');
@@ -198,7 +198,7 @@ export const InfoPage = () => {
 
                             <div className={styles.backButtons}>
                                 <button onClick={() => setFlipped(!flipped)}>Voltar</button>
-                                <Link to='/macros'>
+                                <Link to='/calories'>
                                     <button>Próximo</button>
                                 </Link>
                             </div>
@@ -209,3 +209,5 @@ export const InfoPage = () => {
         </>
     );
 };
+
+export default InfoPage;

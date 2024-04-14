@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/header';
 
-export const MacroPage = () => {
+const MacroPage = () => {
     const [flipped, setFlipped] = useState(false);
     const [selectedMacro, setSelectedMacro] = useState('');
 
@@ -33,9 +33,9 @@ export const MacroPage = () => {
     };
     return (
         <>
-        <Header>
-            <h1>Calculando os Macros</h1>
-        </Header>
+            <Header>
+                <h1>Calculando os Macros</h1>
+            </Header>
             <motion.div
                 initial={{ x: 1000 }}
                 animate={{ x: 0 }}
@@ -71,7 +71,7 @@ export const MacroPage = () => {
                     </section>
                 </div>
                 <div className={styles.bothSidesButtons}>
-                    <Link to={flipped ? '#' : '/macros'}>
+                    <Link to={flipped ? '#' : '/calories'}>
                         <button onClick={(e) => {
                             if (flipped) {
                                 e.preventDefault();
@@ -79,7 +79,7 @@ export const MacroPage = () => {
                             }
                         }}>Voltar</button>
                     </Link>
-                    <Link to='/calculadora'>
+                    <Link to='/info'>
                         <button className={styles.btnAgain} >De novo</button>
                     </Link>
                 </div>
@@ -87,3 +87,5 @@ export const MacroPage = () => {
         </>
     );
 };
+
+export default MacroPage;

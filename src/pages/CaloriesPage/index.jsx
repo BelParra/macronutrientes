@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedBorder from "../../components/AnimatedBorder";
 import { motion } from 'framer-motion';
 import styles from './styles.module.scss';
 import { RangeNutritional } from "../../components/Chartjs/Ranges/RangeNutritional";
@@ -8,7 +7,7 @@ import Graphic from '../../components/Chartjs';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/header';
 
-export const CaloriesPage = () => {
+const CaloriesPage = () => {
   const gastoEnergeticoDiario = localStorage.getItem('GED');
   const gastoEnergeticoBasal = localStorage.getItem('GEB');
   const activity = localStorage.getItem('Activity');
@@ -63,7 +62,7 @@ export const CaloriesPage = () => {
 
   function calculate(e) {
     e.preventDefault();
-    navigate('/alimentacao');
+    navigate('/macronutrients');
 
     localStorage.setItem('proteinGED', proteinValueGED);
     localStorage.setItem('proteinGEB', proteinValueGEB);
@@ -148,7 +147,7 @@ export const CaloriesPage = () => {
           </div>
         </div>
         <div className={styles.bothSidesButtons}>
-          <Link to='/calculadora'>
+          <Link to='/info'>
             <button>Voltar</button>
           </Link>
           <button onClick={(e) => { e.preventDefault(); calculate(e); }}>Próximo</button>
@@ -157,3 +156,5 @@ export const CaloriesPage = () => {
     </>
   );
 };
+
+export default CaloriesPage;
